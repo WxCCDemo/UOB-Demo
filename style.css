@@ -1,12 +1,19 @@
+/* Reset and base */
 body {
   font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
   margin: 0;
   background: linear-gradient(135deg, #f4f6fb 0%, #e6ecf7 100%);
   color: #222;
+  box-sizing: border-box;
 }
+
 section {
-  margin: 2.2em auto;
+  margin: 2.5em auto;
 }
+
+/*------------------------
+|  NAVIGATION
+-------------------------*/
 .main-nav {
   background: #002663;
   display: flex;
@@ -18,6 +25,7 @@ section {
   z-index: 100;
   box-shadow: 0 2px 6px #0001;
 }
+
 .main-nav a {
   color: #fff;
   text-decoration: none;
@@ -27,18 +35,24 @@ section {
   padding: 0 0.2em 0.2em 0.2em;
   border-bottom: 2px solid transparent;
 }
+
 .main-nav a:hover,
 .main-nav a:focus {
   color: #bc2026;
   border-bottom: 2px solid #bc2026;
 }
+
 @media (max-width: 700px) {
   .main-nav {
     gap: 1.4em;
     font-size: 0.97em;
-    padding: 0.6em 0 0.5em 0;
+    padding: 0.6em 0;
   }
 }
+
+/*------------------------
+|  HEADER & LOGO
+-------------------------*/
 .main-header {
   background: #002663;
   color: #fff;
@@ -58,6 +72,10 @@ section {
   padding: 5px;
   margin: 10px 0;
 }
+
+/*------------------------
+|  HERO SECTION
+-------------------------*/
 .hero {
   background: #e3eaf7;
   padding: 2.5em 1em 2em 1em;
@@ -73,95 +91,104 @@ section {
   font-size: 1.2em;
   color: #444b5d;
 }
-/* SERVICES PANEL: 2x2 GRID */
+
+/*------------------------
+|  SERVICES PANEL - 2x2 GRID
+-------------------------*/
 .services-panel {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 2px 10px #0001;
-  margin: 2em auto;
-  max-width: 700px;
-  padding: 2em 1.5em 1.5em 1.5em;
+  padding: 2em 1.5em;
+  max-width: 800px;
+  margin: 0 auto;
   border-bottom: 1px solid #e0e8f8;
 }
+
 .services-panel h2 {
   text-align: center;
   color: #002663;
   margin-bottom: 1.5em;
 }
-/* 2x2 grid for services */
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2em;
-  justify-items: center;
-  align-items: stretch;
-  max-width: 600px;
-  margin: 0 auto;
+  gap: 2em;
 }
+
+@media (max-width: 700px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .service-card {
-  width: 100%;
   background: #f9fafc;
   border-radius: 12px;
   box-shadow: 0 1px 4px #0001;
-  padding: 1.5em 1em;
+  padding: 1.5em;
   text-align: center;
   transition: box-shadow 0.2s, transform 0.18s;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .service-card:hover {
   box-shadow: 0 4px 20px #00266322;
   transform: translateY(-3px) scale(1.02);
 }
+
 .service-icon {
   width: 48px;
   height: 48px;
   margin-bottom: 0.7em;
-  display: inline-block;
 }
-@media (max-width: 900px) {
-  .services-panel {
-    max-width: 97vw;
-  }
-  .services-grid {
-    max-width: 97vw;
-    grid-gap: 1em;
-  }
-}
-@media (max-width: 700px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-    max-width: 97vw;
-    grid-gap: 1.2em;
-  }
-  .service-card {
-    max-width: 100%;
-  }
-}
-/* CONTACT PANEL: ONE ROW */
+
+/*------------------------
+|  CONTACT PANEL - ONE ROW WITH SCROLL
+-------------------------*/
 .contact-panel {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 2px 10px #0001;
-  margin: 2em auto;
-  max-width: 950px;
-  padding: 2em 1.5em 1.5em 1.5em;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2em 1.5em;
   border-bottom: 1px solid #e0e8f8;
+  overflow-x: hidden; /* Prevent outer scroll */
 }
+
 .contact-panel h2 {
   text-align: center;
   color: #002663;
   margin-bottom: 1.5em;
 }
+
 .contact-grid {
   display: flex;
   flex-wrap: nowrap;
   gap: 2em;
-  justify-content: center;
+  justify-content: flex-start;
   overflow-x: auto;
   padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  scroll-behavior: smooth;
 }
+
+.contact-grid::-webkit-scrollbar {
+  height: 6px;
+}
+.contact-grid::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 5px;
+}
+.contact-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .contact-card {
   flex: 0 0 260px;
   min-width: 220px;
@@ -171,25 +198,23 @@ section {
   box-shadow: 0 1px 4px #0001;
   padding: 1.5em 1em;
   text-align: center;
-  margin-bottom: 0;
   transition: box-shadow 0.2s, transform 0.18s;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .contact-card:hover {
   box-shadow: 0 4px 20px #00266322;
   transform: translateY(-3px) scale(1.02);
 }
+
 .icon {
   width: 38px;
   height: 38px;
   margin-bottom: 0.7em;
 }
-.icon.large {
-  width: 60px;
-  height: 60px;
-}
+
 .qr {
   width: 100px;
   height: 100px;
@@ -198,6 +223,7 @@ section {
   background: #fff;
   border: 1px solid #eee;
 }
+
 .contact-link {
   display: inline-block;
   margin: 0.6em 0 0 0;
@@ -205,56 +231,28 @@ section {
   font-weight: bold;
   font-size: 1.1em;
   text-decoration: none;
-  word-break: break-all;
+  word-break: break-word;
   border-radius: 18px;
   transition: background 0.17s, color 0.17s;
   padding: 0.38em 0.9em;
   background: #e6ecf7;
 }
+
 .contact-link:hover {
   text-decoration: underline;
   background: #bc2026;
   color: #fff;
 }
+
 .qr-caption {
   font-size: 0.95em;
   color: #555;
   margin-top: 0.2em;
 }
-/* Responsive stacking for contact cards on smaller screens */
-@media (max-width: 950px) {
-  .branding-bar {
-    flex-direction: column;
-    gap: 1em;
-  }
-  .contact-grid {
-    flex-wrap: wrap;
-    gap: 1em;
-  }
-  .contact-card {
-    margin: 0.8em auto;
-    min-width: 180px;
-    max-width: 420px;
-  }
-}
-@media (max-width: 600px) {
-  .logo {
-    height: 44px;
-  }
-  .qr {
-    width: 70px;
-    height: 70px;
-  }
-  .services-panel,
-  .contact-panel {
-    padding: 1.2em 0.5em;
-  }
-  .main-nav {
-    font-size: 0.97em;
-    padding: 0.4em 0 0.4em 0;
-    gap: 0.7em;
-  }
-}
+
+/*------------------------
+|  FOOTER
+-------------------------*/
 footer {
   background: #002663;
   color: #fff;
@@ -262,4 +260,32 @@ footer {
   padding: 1.2em 0;
   font-size: 1em;
   margin-top: 2em;
+}
+
+/*------------------------
+|  RESPONSIVE CLEANUP
+-------------------------*/
+@media (max-width: 600px) {
+  .branding-bar {
+    flex-direction: column;
+  }
+
+  .logo {
+    height: 44px;
+  }
+
+  .qr {
+    width: 70px;
+    height: 70px;
+  }
+
+  .services-panel,
+  .contact-panel {
+    padding: 1.2em 0.75em;
+  }
+
+  .main-nav {
+    font-size: 0.95em;
+    gap: 1em;
+  }
 }
