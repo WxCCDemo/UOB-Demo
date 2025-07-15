@@ -1,10 +1,53 @@
+/*------------------------*
+|  GLOBAL TYPOGRAPHY & LAYOUT
+*-------------------------*/
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
   margin: 0;
   background: linear-gradient(135deg, #f4f6fb 0%, #e6ecf7 100%);
   color: #222;
 }
-
+section {
+  margin: 2.2em auto;
+}
+/*------------------------*
+|  NAVIGATION
+*-------------------------*/
+.main-nav {
+  background: #002663;
+  display: flex;
+  justify-content: center;
+  gap: 2.5em;
+  padding: 1em 0 0.7em 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px #0001;
+}
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.08em;
+  transition: color 0.18s, border-bottom 0.18s;
+  padding: 0 0.2em 0.2em 0.2em;
+  border-bottom: 2px solid transparent;
+}
+.main-nav a:hover,
+.main-nav a:focus {
+  color: #bc2026;
+  border-bottom: 2px solid #bc2026;
+}
+@media (max-width: 700px) {
+  .main-nav {
+    gap: 1.4em;
+    font-size: 0.97em;
+    padding: 0.6em 0 0.5em 0;
+  }
+}
+/*------------------------*
+|  HEADER & LOGO
+*-------------------------*/
 .main-header {
   background: #002663;
   color: #fff;
@@ -27,7 +70,9 @@ body {
 .logo.fbm {
   height: 44px;
 }
-
+/*------------------------*
+|  HERO SECTION
+*-------------------------*/
 .hero {
   background: #e3eaf7;
   padding: 2.5em 1em 2em 1em;
@@ -43,7 +88,59 @@ body {
   font-size: 1.2em;
   color: #444b5d;
 }
-
+/*------------------------*
+|  SERVICES PANEL
+*-------------------------*/
+.services-panel {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px #0001;
+  margin: 2em auto;
+  max-width: 1050px;
+  padding: 2em 1.5em 1.5em 1.5em;
+  border-bottom: 1px solid #e0e8f8;
+}
+.services-panel h2 {
+  text-align: center;
+  color: #002663;
+  margin-bottom: 1.5em;
+}
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+.service-card {
+  flex: 1 1 220px;
+  min-width: 210px;
+  max-width: 260px;
+  background: #f9fafc;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px #0001;
+  padding: 1.5em 1em;
+  text-align: center;
+  margin-bottom: 1em;
+  transition: box-shadow 0.2s, transform 0.18s;
+}
+.service-card:hover {
+  box-shadow: 0 4px 20px #00266322;
+  transform: translateY(-3px) scale(1.02);
+}
+@media (max-width: 950px) {
+  .services-grid {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .service-card {
+    margin: 0 auto 1em auto;
+    min-width: 170px;
+    max-width: 380px;
+  }
+}
+/*------------------------*
+|  CONTACT PANEL
+*-------------------------*/
 .contact-panel {
   background: #fff;
   border-radius: 16px;
@@ -51,6 +148,7 @@ body {
   margin: 2em auto;
   max-width: 950px;
   padding: 2em 1.5em 1.5em 1.5em;
+  border-bottom: 1px solid #e0e8f8;
 }
 .contact-panel h2 {
   text-align: center;
@@ -73,10 +171,11 @@ body {
   padding: 1.5em 1em;
   text-align: center;
   margin-bottom: 1em;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.18s;
 }
 .contact-card:hover {
   box-shadow: 0 4px 20px #00266322;
+  transform: translateY(-3px) scale(1.02);
 }
 .icon {
   width: 38px;
@@ -103,16 +202,24 @@ body {
   font-size: 1.1em;
   text-decoration: none;
   word-break: break-all;
+  border-radius: 18px;
+  transition: background 0.17s, color 0.17s;
+  padding: 0.38em 0.9em;
+  background: #e6ecf7;
 }
 .contact-link:hover {
   text-decoration: underline;
+  background: #bc2026;
+  color: #fff;
 }
 .qr-caption {
   font-size: 0.95em;
   color: #555;
   margin-top: 0.2em;
 }
-
+/*------------------------*
+|  CHAT WIDGET & LIVE CHAT
+*-------------------------*/
 .live-chat {
   display: flex;
   justify-content: center;
@@ -127,6 +234,9 @@ body {
   max-width: 420px;
   width: 100%;
 }
+/*------------------------*
+|  FOOTER
+*-------------------------*/
 footer {
   background: #002663;
   color: #fff;
@@ -135,16 +245,31 @@ footer {
   font-size: 1em;
   margin-top: 2em;
 }
-
+.fbm-branding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5em;
+}
+/*------------------------*
+|  RESPONSIVENESS
+*-------------------------*/
 @media (max-width: 950px) {
+  .branding-bar {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .services-grid,
   .contact-grid {
     flex-direction: column;
     gap: 1em;
   }
+  .service-card,
   .contact-card {
     margin: 0 auto 1em auto;
-    min-width: 180px;
-    max-width: 400px;
+    min-width: 170px;
+    max-width: 420px;
   }
 }
 @media (max-width: 600px) {
@@ -152,14 +277,23 @@ footer {
     flex-direction: column;
     gap: 1em;
   }
-  .logo, .logo.fbm {
+  .logo,
+  .logo.fbm {
     height: 44px;
   }
   .qr {
     width: 70px;
     height: 70px;
   }
-  .contact-panel, .chat-card {
+  .services-panel,
+  .contact-panel,
+  .chat-card {
     padding: 1.2em 0.5em;
   }
+  .main-nav {
+    font-size: 0.97em;
+    padding: 0.4em 0 0.4em 0;
+    gap: 0.7em;
+  }
 }
+
