@@ -9,8 +9,23 @@ body {
   box-sizing: border-box;
 }
 
-section {
+/* Centralize and unify panel widths and alignment */
+.central-panel {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px #0001;
+  max-width: 700px;         /* Set the unified width for all key sections */
+  width: 100%;
   margin: 2.5em auto;
+  box-sizing: border-box;
+  padding: 2em 1.5em;
+}
+
+@media (max-width: 800px) {
+  .central-panel {
+    max-width: 98vw;
+    padding: 1.1em 0.5em;
+  }
 }
 
 /*------------------------
@@ -27,7 +42,6 @@ section {
   z-index: 100;
   box-shadow: 0 2px 6px #0001;
 }
-
 .main-nav a {
   color: #fff;
   text-decoration: none;
@@ -37,13 +51,11 @@ section {
   padding: 0 0.2em 0.2em 0.2em;
   border-bottom: 2px solid transparent;
 }
-
 .main-nav a:hover,
 .main-nav a:focus {
   color: #bc2026;
   border-bottom: 2px solid #bc2026;
 }
-
 @media (max-width: 700px) {
   .main-nav {
     gap: 1.4em;
@@ -78,11 +90,10 @@ section {
 /*------------------------
 |  HERO SECTION
 -------------------------*/
-.hero {
-  background: #e3eaf7;
-  padding: 2.5em 1em 2em 1em;
+.hero.central-panel {
   text-align: center;
-  box-shadow: 0 2px 16px #0001;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
 }
 .hero-content h1 {
   margin: 0 0 0.5em 0;
@@ -97,41 +108,28 @@ section {
 /*------------------------
 |  SERVICES PANEL - 2x2 GRID
 -------------------------*/
-.services-panel {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 10px #0001;
-  padding: 2em 1.5em;
-  max-width: 1200px;
-  width: 95vw;
-  margin: 2em auto;
-  border-bottom: 1px solid #e0e8f8;
+.services-panel.central-panel {
+  margin-top: 0;
+  margin-bottom: 2.5em;
+  /* already inherits width, padding, etc. from .central-panel */
 }
-
 .services-panel h2 {
   text-align: center;
   color: #002663;
   margin-bottom: 1.5em;
 }
-
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2em;
   width: 100%;
 }
-
 @media (max-width: 700px) {
-  .services-panel {
-    max-width: 98vw;
-    padding: 1.2em 0.5em;
-  }
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 1.2em;
+    gap: 1em;
   }
 }
-
 .service-card {
   background: #f9fafc;
   border-radius: 12px;
@@ -143,12 +141,10 @@ section {
   flex-direction: column;
   align-items: center;
 }
-
 .service-card:hover {
   box-shadow: 0 4px 20px #00266322;
   transform: translateY(-3px) scale(1.02);
 }
-
 .service-icon {
   width: 48px;
   height: 48px;
@@ -157,27 +153,18 @@ section {
 }
 
 /*------------------------
-|  CONTACT PANEL - SLIM ROW WITH HORIZONTAL SCROLL
+|  CONTACT PANEL - ROW, REDUCED HEIGHT
 -------------------------*/
-.contact-panel {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 10px #0001;
-  margin: 2em auto;
-  max-width: 200px;
-  padding: 1.2em 0.5em 1em 0.5em;
-  border-bottom: 1px solid #e0e8f8;
-  width: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
+.contact-panel.central-panel {
+  /* Inherit .central-panel width and alignment */
+  padding-top: 0.8em;
+  padding-bottom: 0.6em;
 }
-
 .contact-panel h2 {
   text-align: center;
   color: #002663;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
 }
-
 .contact-grid {
   display: flex;
   flex-wrap: nowrap;
@@ -188,8 +175,9 @@ section {
   padding-left: 1em;
   padding-right: 1em;
   scroll-behavior: smooth;
+  width: 100%;
+  box-sizing: border-box;
 }
-
 .contact-grid::-webkit-scrollbar {
   height: 6px;
 }
@@ -200,15 +188,14 @@ section {
 .contact-grid::-webkit-scrollbar-track {
   background: transparent;
 }
-
 .contact-card {
-  flex: 0 0 100px;
-  min-width: 80px;
-  max-width: 100px;
+  flex: 0 0 210px;
+  min-width: 180px;
+  max-width: 240px;
   background: #f9fafc;
   border-radius: 12px;
   box-shadow: 0 1px 4px #0001;
-  padding: 1.3em 0.8em;
+  padding: 1em 0.8em;
   text-align: center;
   transition: box-shadow 0.2s, transform 0.18s;
   display: flex;
@@ -216,18 +203,15 @@ section {
   align-items: center;
   margin-bottom: 0;
 }
-
 .contact-card:hover {
   box-shadow: 0 4px 20px #00266322;
   transform: translateY(-3px) scale(1.02);
 }
-
 .icon {
   width: 38px;
   height: 38px;
   margin-bottom: 0.7em;
 }
-
 .qr {
   width: 90px;
   height: 90px;
@@ -236,7 +220,6 @@ section {
   background: #fff;
   border: 1px solid #eee;
 }
-
 .contact-link {
   display: inline-block;
   margin: 0.6em 0 0 0;
@@ -250,13 +233,11 @@ section {
   padding: 0.38em 0.9em;
   background: #e6ecf7;
 }
-
 .contact-link:hover {
   text-decoration: underline;
   background: #bc2026;
   color: #fff;
 }
-
 .qr-caption {
   font-size: 0.95em;
   color: #555;
@@ -276,17 +257,20 @@ footer {
 }
 
 /*------------------------
-|  RESPONSIVE
+|  MOBILE RESPONSIVE ADJUSTMENTS
 -------------------------*/
 @media (max-width: 900px) {
-  .services-panel,
-  .contact-panel {
+  .central-panel {
     max-width: 98vw;
     padding-left: 0.5em;
     padding-right: 0.5em;
   }
+  .services-panel,
+  .contact-panel {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-
 @media (max-width: 600px) {
   .branding-bar {
     flex-direction: column;
