@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Page settings -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>UOB Bank (Demo)</title>
   
-  <!-- Favicon and styles -->
+  <!-- Meta description for better SEO -->
+  <meta name="description" content="UOB Bank (Demo): Your trusted partner in digital banking innovation. Discover our modern banking, insurance, and investment services.">
+
+  <!-- Favicon and Google Fonts -->
   <link rel="icon" href="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/UOB-Logo.jpg?v=1751963281507">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="main-header">
+  <!-- Top Navigation Bar -->
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <!-- Header -->
+  <header class="main-header" role="banner">
     <div class="branding-bar">
-      <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/UOB-Logo.jpg?v=1751963281507" alt="UOB Logo" class="logo">
+      <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/UOB-Logo.jpg?v=1751963281507" alt="UOB Bank logo" class="logo">
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
+  <!-- Hero Section -->
+  <section id="home" class="hero">
     <div class="hero-content">
       <h1>Welcome to UOB Bank (Demo)</h1>
       <p class="subtitle">Your trusted partner in banking innovation.</p>
     </div>
   </section>
 
-  <!-- MAIN CONTENT -->
-  <main>
-    <!-- SERVICES PANEL -->
-    <section class="services-panel">
+  <main role="main">
+    <!-- Services Section -->
+    <section id="services" class="services-panel">
       <h2>Our Services</h2>
       <div class="services-grid">
         <div class="service-card">
@@ -55,50 +64,43 @@
       </div>
     </section>
 
-    <!-- CONTACT PANEL -->
-    <section class="contact-panel">
+    <!-- Contact Section -->
+    <section id="contact" class="contact-panel">
       <h2>Contact Us</h2>
       <div class="contact-grid">
-        <!-- Phone Banking -->
         <div class="contact-card">
-          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/Phone.png?v=1751963634624" alt="Phone" class="icon">
+          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/Phone.png?v=1751963634624" alt="Phone icon" class="icon">
           <h3>Phone Banking</h3>
           <a href="tel:+6582004001" class="contact-link">+65 82004001</a>
         </div>
-        <!-- WhatsApp Banking -->
         <div class="contact-card">
-          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/WA_UOB_QRCOde.png?v=1751963517950" alt="WhatsApp QR" class="qr">
+          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/WA_UOB_QRCOde.png?v=1751963517950" alt="WhatsApp QR code" class="qr">
           <h3>WhatsApp Banking</h3>
           <a href="https://wa.me/12076803454" class="contact-link">+1 207 680 3454</a>
           <p class="qr-caption">Scan to chat instantly</p>
         </div>
-        <!-- Email Support -->
         <div class="contact-card">
-          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/Email.png?v=1751963634340" alt="Email" class="icon">
+          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/Email.png?v=1751963634340" alt="Email icon" class="icon">
           <h3>Email Support</h3>
           <a href="mailto:scbankcare@gmail.com" class="contact-link">scbankcare@gmail.com</a>
         </div>
-        <!-- X (Twitter) -->
         <div class="contact-card">
-          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/X.png?v=1751963639110" alt="X (Twitter)" class="icon">
+          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/X.png?v=1751963639110" alt="X/Twitter icon" class="icon">
           <h3>X (Twitter)</h3>
-          <!-- Update link to your actual X/Twitter handle -->
           <a href="https://x.com/" class="contact-link" target="_blank" rel="noopener">Connect on X</a>
         </div>
-        <!-- Facebook Messenger -->
         <div class="contact-card">
-          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/FBM.jpeg?v=1751963643669" alt="FBM Logo" class="icon">
+          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/FBM.jpeg?v=1751963643669" alt="FBM Messenger Logo" class="icon">
           <h3>Messenger (FBM)</h3>
-          <!-- Update link to your Messenger page -->
           <a href="https://m.me/" class="contact-link" target="_blank" rel="noopener">Chat on Messenger</a>
         </div>
       </div>
     </section>
 
-    <!-- LIVE CHAT WIDGET -->
+    <!-- Live Chat Widget (Webex Connect) -->
     <div id="divicw" data-bind="A0993777-C0CF-4DE8-BF2D-57859A20A5A7" data-org=""></div>
     <script>
-      // Loads live chat; shows friendly alert if widget fails
+      // Loads live chat; shows alert if widget fails
       var i = {
         t: function() {
           var e = "https://attachments.apac2.webexengage.com/widget/js/imichatinit.js";
@@ -168,16 +170,16 @@
     </script>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
+  <!-- Footer -->
+  <footer role="contentinfo">
     <div class="fbm-branding">
       <span>In partnership with</span>
       <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/FBM.jpeg?v=1751963643669" alt="FBM Logo" class="logo fbm">
     </div>
     &copy; 2025 UOB Bank (Demo). For demonstration purposes only.
   </footer>
-  
-  <!-- Optional custom JavaScript for interactivity -->
+
+  <!-- Optional: Additional JS -->
   <script src="script.js"></script>
 </body>
 </html>
