@@ -202,9 +202,9 @@ section {
 }
 
 .contact-card {
-  flex: 0 0 210px;
-  min-width: 180px;
-  max-width: 260px;
+  flex: 0 0 100px;
+  min-width: 80px;
+  max-width: 100px;
   background: #f9fafc;
   border-radius: 12px;
   box-shadow: 0 1px 4px #0001;
