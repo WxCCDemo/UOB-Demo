@@ -13,12 +13,12 @@ body {
   color: var(--uob-dark);
 }
 
+/* Header & Nav */
 header {
   background: var(--uob-blue);
   color: #fff;
   box-shadow: 0 2px 8px #0001;
 }
-
 .container-header {
   display: flex;
   align-items: center;
@@ -28,12 +28,10 @@ header {
   padding: 0.7em 1em;
   position: relative;
 }
-
 .logo {
   height: 52px;
   width: auto;
 }
-
 #nav-toggle {
   display: none;
   background: none;
@@ -42,11 +40,9 @@ header {
   font-size: 2em;
   cursor: pointer;
 }
-
 nav {
   margin-left: auto;
 }
-
 nav ul {
   display: flex;
   list-style: none;
@@ -55,7 +51,6 @@ nav ul {
   gap: 2em;
   align-items: center;
 }
-
 nav a {
   color: #fff;
   text-decoration: none;
@@ -64,12 +59,10 @@ nav a {
   border-radius: 5px;
   transition: background 0.19s;
 }
-
 nav a:hover,
 nav a:focus {
   background: var(--uob-red);
 }
-
 @media (max-width: 900px) {
   nav ul {
     gap: 1em;
@@ -78,7 +71,6 @@ nav a:focus {
     height: 40px;
   }
 }
-
 @media (max-width: 700px) {
   .container-header {
     flex-wrap: wrap;
@@ -129,6 +121,16 @@ nav a:focus {
   padding: 2em 1em 1em 1em;
 }
 
+/* MAIN BLUE BORDER */
+.main-board.blue-boarded {
+  border: 3px solid #012169;
+  border-radius: 14px;
+  padding: 2em 1.5em;
+  background: #fff;
+  box-shadow: 0 6px 24px #01216918;
+  margin-bottom: 3em;
+}
+
 /* Welcome Section */
 .welcome-section {
   display: flex;
@@ -143,25 +145,19 @@ nav a:focus {
   padding: 2.5em 2em;
   flex-wrap: wrap;
 }
-
-.welcome-left {
-  flex: 1 1 320px;
-}
-
+.welcome-left { flex: 1 1 320px; }
 .main-welcome {
   font-size: 2.5em;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 0.4em;
 }
-
 .welcome-desc {
   font-size: 1.15em;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 0.7em;
 }
-
 .welcome-image-below img {
   width: 100%;
   max-width: 400px;
@@ -170,6 +166,7 @@ nav a:focus {
   box-shadow: 0 3px 18px #01216922;
 }
 
+/* Login Box */
 .floating-login {
   flex: 1 1 300px;
   max-width: 360px;
@@ -177,7 +174,6 @@ nav a:focus {
   justify-content: center;
   align-items: flex-start;
 }
-
 .login-box {
   background: #fff;
   color: var(--uob-dark);
@@ -190,7 +186,6 @@ nav a:focus {
   flex-direction: column;
   gap: 0.6em;
 }
-
 .login-box h2 {
   color: var(--uob-blue);
   margin-top: 0;
@@ -198,7 +193,6 @@ nav a:focus {
   font-size: 1.31em;
   font-weight: 700;
 }
-
 .login-box label {
   font-size: 1em;
   margin-bottom: 0.2em;
@@ -222,7 +216,6 @@ nav a:focus {
   border: 1.7px solid var(--uob-red);
   background: #fff;
 }
-
 .login-box button[type="submit"] {
   margin-top: 0.7em;
   background: var(--uob-blue);
@@ -240,7 +233,6 @@ nav a:focus {
 .login-box button:focus {
   background: var(--uob-red);
 }
-
 .link-row {
   display: flex;
   justify-content: space-between;
@@ -256,36 +248,19 @@ nav a:focus {
   color: #8C8C8C;
   font-size: 0.95em;
 }
-
 @media (max-width: 900px) {
   .welcome-section {
     flex-direction: column;
     gap: 2em;
     padding: 2em 1.2em;
   }
-  .floating-login {
-    max-width: 100%;
-    justify-content: flex-start;
-  }
+  .floating-login { max-width: 100%; justify-content: flex-start; }
   .main-welcome { font-size: 2em; }
   .welcome-image-below img { max-width: 100%; }
 }
-
 @media (max-width: 600px) {
-  .welcome-section {
-    padding: 1.2em 0.5em;
-  }
+  .welcome-section { padding: 1.2em 0.5em; }
   .main-welcome { font-size: 1.3em; }
-}
-
-/* Section Blue Border for Groups */
-.section-board.blue-boarded {
-  border: 2.8px solid #012169;
-  border-radius: 13px;
-  padding: 1.3em 1em;
-  margin-bottom: 2em;
-  background: #fff;
-  box-shadow: 0 3px 16px #01216916;
 }
 
 /* Cards Layout */
@@ -295,12 +270,10 @@ nav a:focus {
   gap: 2.2em;
   margin-top: 1.5em;
 }
-.products-row.left-shift,
-.contact-row.left-shift {
+.products-row.left-shift, .contact-row.left-shift {
   margin-left: 0;
 }
-.product-card,
-.contact-method {
+.product-card, .contact-method {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 9px #01216911;
@@ -314,7 +287,6 @@ nav a:focus {
   text-align: center;
   transition: box-shadow 0.18s;
 }
-
 .product-card img,
 .contact-method img {
   width: 48px;
@@ -325,12 +297,10 @@ nav a:focus {
   background: #f2f3fa;
   box-shadow: 0 1px 5px #01216909;
 }
-
 .product-card h3 {
   color: var(--uob-blue);
   margin-bottom: 0.3em;
 }
-
 .method-label {
   color: var(--uob-blue);
   font-weight: 600;
@@ -346,34 +316,28 @@ nav a:focus {
   text-decoration: underline;
   color: var(--uob-blue);
 }
-
 section h2 {
   color: var(--uob-blue);
   font-size: 1.5em;
   margin-top: 1.7em;
   margin-bottom: 0.8em;
 }
-
 @media (max-width: 1000px) {
-  .products-row,
-  .contact-row {
+  .products-row, .contact-row {
     gap: 1.2em;
   }
-  .product-card,
-  .contact-method {
+  .product-card, .contact-method {
     min-width: 150px;
     max-width: 50vw;
   }
 }
 @media (max-width: 700px) {
-  .products-row,
-  .contact-row {
+  .products-row, .contact-row {
     flex-direction: column;
     align-items: stretch;
     gap: 1em;
   }
-  .product-card,
-  .contact-method {
+  .product-card, .contact-method {
     max-width: 100%;
     min-width: 0;
   }
@@ -388,7 +352,6 @@ footer {
   font-size: 0.96em;
   margin-top: 3em;
 }
-
 #live-chat-container {
   margin-top: 2.3em;
   min-height: 54px;
