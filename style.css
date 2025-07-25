@@ -123,14 +123,13 @@ nav a:focus {
   background: var(--uob-grey);
   min-height: 100vh;
 }
-
 .container-inner {
   max-width: 1350px;
   margin: 0 auto;
   padding: 2em 1em 1em 1em;
 }
 
-/* WELCOME SECTION */
+/* Welcome Section */
 .welcome-section {
   display: flex;
   gap: 3em;
@@ -279,22 +278,29 @@ nav a:focus {
   .main-welcome { font-size: 1.3em; }
 }
 
-/* CARDS AND PRODUCTS */
+/* Section Blue Border for Groups */
+.section-board.blue-boarded {
+  border: 2.8px solid #012169;
+  border-radius: 13px;
+  padding: 1.3em 1em;
+  margin-bottom: 2em;
+  background: #fff;
+  box-shadow: 0 3px 16px #01216916;
+}
 
-.products-row, .contact-row, .about-row {
+/* Cards Layout */
+.products-row, .contact-row {
   display: flex;
   flex-wrap: wrap;
   gap: 2.2em;
   margin-top: 1.5em;
 }
 .products-row.left-shift,
-.contact-row.left-shift,
-.about-row.left-shift {
+.contact-row.left-shift {
   margin-left: 0;
 }
 .product-card,
-.contact-method,
-.about-card {
+.contact-method {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 9px #01216911;
@@ -310,8 +316,7 @@ nav a:focus {
 }
 
 .product-card img,
-.contact-method img,
-.about-card img {
+.contact-method img {
   width: 48px;
   height: 48px;
   margin-bottom: 0.7em;
@@ -321,8 +326,7 @@ nav a:focus {
   box-shadow: 0 1px 5px #01216909;
 }
 
-.product-card h3,
-.about-card h3 {
+.product-card h3 {
   color: var(--uob-blue);
   margin-bottom: 0.3em;
 }
@@ -350,53 +354,31 @@ section h2 {
   margin-bottom: 0.8em;
 }
 
-/* Blue Border Around Product & Loan Section Containers */
-.section-board.blue-boarded {
-  border: 2.8px solid #012169;
-  border-radius: 13px;
-  padding: 1.3em 1em;
-  margin-bottom: 2em;
-  background: #fff;
-  box-shadow: 0 3px 16px #01216916;
-}
-
-/* Remove card blue borders if using section container border */
-/*
-.product-card.blue-bordered, .about-card.blue-bordered, .contact-method.blue-bordered {
-  border: none !important;
-}
-*/
-
 @media (max-width: 1000px) {
   .products-row,
-  .contact-row,
-  .about-row {
+  .contact-row {
     gap: 1.2em;
   }
   .product-card,
-  .contact-method,
-  .about-card {
+  .contact-method {
     min-width: 150px;
     max-width: 50vw;
   }
 }
 @media (max-width: 700px) {
   .products-row,
-  .contact-row,
-  .about-row {
+  .contact-row {
     flex-direction: column;
     align-items: stretch;
     gap: 1em;
   }
   .product-card,
-  .contact-method,
-  .about-card {
+  .contact-method {
     max-width: 100%;
     min-width: 0;
   }
 }
 
-/* Footer */
 footer {
   background: #fff;
   border-top: 2px solid #f2f2f2;
