@@ -123,12 +123,14 @@ nav a:focus {
   background: var(--uob-grey);
   min-height: 100vh;
 }
+
 .container-inner {
   max-width: 1350px;
   margin: 0 auto;
   padding: 2em 1em 1em 1em;
 }
 
+/* WELCOME SECTION */
 .welcome-section {
   display: flex;
   gap: 3em;
@@ -192,7 +194,8 @@ nav a:focus {
 
 .login-box h2 {
   color: var(--uob-blue);
-  margin-top: 0; margin-bottom: 0.6em;
+  margin-top: 0;
+  margin-bottom: 0.6em;
   font-size: 1.31em;
   font-weight: 700;
 }
@@ -276,9 +279,9 @@ nav a:focus {
   .main-welcome { font-size: 1.3em; }
 }
 
-.products-row,
-.contact-row,
-.about-row {
+/* CARDS AND PRODUCTS */
+
+.products-row, .contact-row, .about-row {
   display: flex;
   flex-wrap: wrap;
   gap: 2.2em;
@@ -305,6 +308,7 @@ nav a:focus {
   text-align: center;
   transition: box-shadow 0.18s;
 }
+
 .product-card img,
 .contact-method img,
 .about-card img {
@@ -316,6 +320,7 @@ nav a:focus {
   background: #f2f3fa;
   box-shadow: 0 1px 5px #01216909;
 }
+
 .product-card h3,
 .about-card h3 {
   color: var(--uob-blue);
@@ -344,6 +349,23 @@ section h2 {
   margin-top: 1.7em;
   margin-bottom: 0.8em;
 }
+
+/* Blue Border Around Product & Loan Section Containers */
+.section-board.blue-boarded {
+  border: 2.8px solid #012169;
+  border-radius: 13px;
+  padding: 1.3em 1em;
+  margin-bottom: 2em;
+  background: #fff;
+  box-shadow: 0 3px 16px #01216916;
+}
+
+/* Remove card blue borders if using section container border */
+/*
+.product-card.blue-bordered, .about-card.blue-bordered, .contact-method.blue-bordered {
+  border: none !important;
+}
+*/
 
 @media (max-width: 1000px) {
   .products-row,
@@ -374,6 +396,7 @@ section h2 {
   }
 }
 
+/* Footer */
 footer {
   background: #fff;
   border-top: 2px solid #f2f2f2;
@@ -387,10 +410,4 @@ footer {
 #live-chat-container {
   margin-top: 2.3em;
   min-height: 54px;
-}
-
-/* BLUE BORDER ON ALL RELEVANT CARDS */
-.blue-bordered {
-  border: 2.5px solid #012169 !important;
-  box-shadow: 0 1px 9px #01216911;
 }
