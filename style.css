@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
 }
 
-/* Navigation */
+/* UOB Navigation */
 .main-nav {
   background: #012169;
   padding: 0.75rem 5vw;
@@ -27,7 +27,7 @@ body {
   color: #fff;
   font-weight: 500;
   text-decoration: none;
-  padding: 6px 18px;
+  padding: 8px 18px;
   border-radius: 4px;
   transition: background .2s;
   font-size: 1.1rem;
@@ -52,78 +52,154 @@ body {
   width: 100%;
 }
 
-/* Hero Section */
-.hero {
-  background: linear-gradient(60deg, #012169 77%, #C5001A 100%);
+/* Hero Section / Overview */
+.hero-section {
+  background: linear-gradient(70deg, #012169 75%, #C5001A 105%);
   color: #fff;
-  padding: clamp(2rem, 6vw, 5rem) 5vw;
+  padding: clamp(2rem, 6vw, 5rem) 5vw 2.5rem 5vw;
   text-align: center;
 }
-.hero h1 {
+.hero-section h1 {
   font-size: clamp(1.4rem, 5vw, 3rem);
   margin-bottom: 0.5rem;
   color: #fff;
 }
-.hero .subtitle {
+.hero-section .subtitle {
   font-size: clamp(1rem, 2vw, 1.6rem);
-  font-weight: 400;
   opacity: 0.97;
 }
 
-/* Panels */
-.services-panel, .contact-panel {
+.demo-summary {
+  margin-top: 1.8rem;
+  font-size: 1.2rem;
+}
+.balance-label {
+  font-weight: 500;
+  margin-right: 0.6em;
+}
+.balance-amount {
+  font-weight: 700;
+  font-size: 1.3em;
+  letter-spacing: .02em;
+}
+
+.demo-actions {
+  margin-top: 1.5em;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.action-btn {
   background: #fff;
-  margin: clamp(1rem, 4vw, 3rem) 2vw;
+  color: #012169;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 32px;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  box-shadow: 0 2px 9px #01216918;
+  margin-bottom: 0.6em;
+  transition: background .2s, color .2s;
+}
+.action-btn:hover,
+.action-btn:focus {
+  background: #C5001A;
+  color: #fff;
+}
+/* Services Section */
+.services-section {
+  background: #fff;
+  margin: clamp(1.2rem, 4vw, 2.8rem) 2vw 1rem 2vw;
   border-radius: 10px;
   box-shadow: 0 2px 8px #01216911;
-  padding: clamp(1.2rem, 3vw, 2.5rem) 2vw;
+  padding: clamp(1.2rem, 3vw, 2.5rem) 2vw 2rem 2vw;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
+.services-section h2 {
+  margin-bottom: 1.2em;
+  color: #012169;
+}
 
-/* Grid layouts */
-.services-grid, .contact-grid {
+/* Services Grid */
+.services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: clamp(1rem, 2.5vw, 2.5rem);
-  margin-top: 1.5rem;
 }
-
-.service-card, .contact-card {
+.service-card {
   background: #f6f8fa;
   border-radius: 8px;
-  text-align: center;
-  padding: clamp(1rem, 2vw, 2rem) 1vw;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 1.1em;
+  padding: 1.2em 1em;
   box-shadow: 0 1px 6px #0121690d;
   transition: box-shadow .2s;
 }
-.service-card:hover,
-.contact-card:hover {
+.service-card:hover {
   box-shadow: 0 4px 16px #01216933;
 }
-
-.service-icon, .icon, .qr {
-  width: clamp(2rem, 6vw, 56px);
+.service-icon {
+  width: clamp(2.5rem, 6vw, 56px);
   max-width: 64px;
   height: auto;
-  margin-bottom: 0.7rem;
+  flex-shrink: 0;
 }
-
-.service-card h3, .contact-card h3 {
+.service-card h3 {
   color: #012169;
-  margin: 0 0 0.3rem 0;
+  margin: 0 0 0.2em 0;
+}
+.service-card p {
+  margin: 0;
+  color: #222;
+  font-size: 0.99em;
 }
 
-.qr-caption {
-  font-size: 0.86em;
+/* Contact Section */
+.contact-section {
+  margin: clamp(1.2rem, 4vw, 2.5rem) 2vw 2em 2vw;
+  padding: 2rem 2vw 1.2em 2vw;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #01216911;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-section h2 {
+  margin-bottom: 1.2em;
   color: #012169;
-  margin-top: 2px;
 }
 
+/* Contacts Grid */
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.4em;
+}
+.contact-card {
+  background: #f6f8fa;
+  border-radius: 8px;
+  text-align: center;
+  padding: 1.2em 1em 0.6em 1em;
+  box-shadow: 0 1px 6px #0121690d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon, .qr {
+  width: clamp(2rem, 5vw, 44px);
+  max-width: 48px;
+  height: auto;
+  margin-bottom: 0.6rem;
+}
 .contact-link {
-  display: block;
-  margin-top: 2px;
   color: #C5001A;
   text-decoration: none;
   font-weight: 500;
@@ -134,7 +210,17 @@ body {
   text-decoration: underline;
   color: #012169;
 }
+.contact-card span {
+  font-size: 1.05em;
+  font-weight: 500;
+}
+.contact-card p {
+  color: #444;
+  font-size: 0.96em;
+  margin: 0.2em 0 0 0;
+}
 
+/* Footer */
 footer {
   padding: 1.2rem 5vw;
   text-align: center;
@@ -142,59 +228,52 @@ footer {
   color: #8C8C8C;
   font-size: 1em;
   border-top: 2px solid #F2F2F2;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 }
 
-/* Responsive for extra-small screens */
-@media (max-width: 600px) {
-  .main-nav, .branding-bar, .hero, .services-panel, .contact-panel, footer {
-    padding-left: 3vw;
-    padding-right: 3vw;
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .main-nav, .branding-bar, .hero-section, .services-section, .contact-section, footer {
+    padding-left: 2vw;
+    padding-right: 2vw;
   }
-  .services-grid, .contact-grid {
+  .services-grid,
+  .contact-methods {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.2em;
   }
   .logo {
     height: 36px;
   }
-}
-
-/* Responsive for tablets and small laptops */
-@media (max-width: 900px) {
-  .main-nav {
-    gap: 1rem;
-    padding: 0.5rem 2vw;
-  }
-  .branding-bar,
-  .services-panel,
-  .contact-panel {
-    padding-left: 2vw;
-    padding-right: 2vw;
+  .service-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 0.6em;
   }
 }
 
-/* FOR WIDESCREENS (desktops, TVs) */
+/* Widescreen/TV layouts */
 @media (min-width: 1400px) {
   body {
     font-size: 1.15rem;
   }
-  .services-panel,
-  .contact-panel,
-  .hero,
+  .services-section,
+  .contact-section,
+  .hero-section,
   .branding-bar,
   footer {
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
   }
-  .services-grid, .contact-grid {
+  .services-grid, .contact-methods {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* High contrast focus for accessibility (opt-in with user-is-tabbing) */
-.user-is-tabbing a:focus, .user-is-tabbing button:focus, .user-is-tabbing .contact-link:focus {
-  outline: 3px solid #C5001A !important;
+/* High-contrast focus outline for accessibility */
+a:focus, .action-btn:focus, .contact-link:focus {
+  outline: 2.5px solid #C5001A;
   outline-offset: 2px;
 }
