@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth' });
-        // Optional: close menu on mobile after click
         nav.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
       }
