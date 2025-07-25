@@ -1,99 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>UOB Bank (Demo)</title>
-  <meta name="description" content="UOB Bank (Demo): Your trusted partner in digital banking innovation. Discover our modern banking, insurance, and investment services.">
-  <link rel="icon" href="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/UOB-Logo.jpg?v=1751963281507">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OCBC Bank Singapore - Demo Website</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Top Navigation Bar -->
-  <nav class="main-nav" aria-label="Main navigation">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact Us</a>
-  </nav>
 
-  <!-- Header -->
-  <header class="main-header" role="banner">
-    <div class="branding-bar">
-      <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/UOB-Logo.jpg?v=1751963281507" alt="UOB Bank logo" class="logo">
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-<section id="home" class="hero" central-panel>
-  <div class="hero-content">
-    <h1>Welcome to UOB Bank (Demo)</h1>
-    <p class="subtitle">Your trusted partner in banking innovation.</p>
+<header>
+  <div class="container-header">
+    <img src="https://raw.githubusercontent.com/WxCCDemo/OCBC-Demo/main/OCBCLogo1.jpeg" alt="OCBC Bank Logo" class="logo" />
+    <button id="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav aria-label="Primary" id="primary-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#personal-banking">Personal Banking</a></li>
+        <li><a href="#loans">Loans</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#corporate-banking">Corporate Banking</a></li>
+      </ul>
+    </nav>
   </div>
-</section>
+</header>
 
-  <main role="main">
-    <!-- Services Section: 2x2 Grid -->
-    <section id="services" class="services-panel">
-      <h2>Our Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Cards" class="service-icon">
-          <h3>Cards</h3>
-          <p>Credit &amp; debit cards for every need, with exclusive rewards and privileges.</p>
+<div class="main-container">
+  <div class="container-inner">
+    <main>
+      <!-- Welcome Section -->
+      <section class="welcome-section" id="home">
+        <div class="welcome-left">
+          <h1 class="main-welcome">Welcome to OCBC Bank Singapore</h1>
+          <p class="welcome-desc">
+            Your trusted financial partner with comprehensive and innovative banking solutions tailored just for you.
+          </p>
         </div>
-        <div class="service-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/2202/2202112.png" alt="Borrow" class="service-icon">
-          <h3>Borrow</h3>
-          <p>Personal loans, home loans, and flexible credit solutions tailored for you.</p>
+        <div class="welcome-right floating-login">
+          <form class="login-box" aria-labelledby="internetBankingLogin" onsubmit="return false;">
+            <h2 class="login-title">Internet Banking Login</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" autocomplete="username" required />
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" autocomplete="current-password" required />
+            <button type="submit" aria-label="Login to Internet Banking">Login</button>
+            <div class="link-row">
+              <a href="#">Forgot Password?</a>
+              <a href="#">Register</a>
+            </div>
+            <p class="security-note">
+              Please ensure you are on the official OCBC website to keep your account secure.
+            </p>
+          </form>
         </div>
-        <div class="service-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" alt="Invest" class="service-icon">
-          <h3>Invest</h3>
-          <p>Grow your wealth with our investment products and expert advice.</p>
-        </div>
-        <div class="service-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Insure" class="service-icon">
-          <h3>Insure</h3>
-          <p>Comprehensive insurance plans for life, health, and assets.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section: Single Row -->
-    <section id="contact" class="contact-panel">
-      <h2>Contact Us</h2>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/Phone.png?v=1751963634624" alt="Phone icon" class="icon">
-          <h3>Phone Banking</h3>
-          <a href="tel:+6582004001" class="contact-link">+65 82004001</a>
+      <!-- Personal Banking -->
+      <section id="personal-banking">
+        <h2>Personal Banking</h2>
+        <div class="products-row left-shift">
+          <div class="product-card">
+            <img src="https://raw.githubusercontent.com/WxCCDemo/OCBC-Demo/main/Singapore%20Bank%20Branch%20Interior.jpg" alt="Bank Accounts" />
+            <h3>Bank Accounts</h3>
+            <p>Savings, Current & Foreign Currency Accounts for your daily needs.</p>
+          </div>
+          <div class="product-card">
+            <img src="https://raw.githubusercontent.com/WxCCDemo/OCBC-Demo/main/OCBC%20Credit%20Card%20product%20Shot.jpeg" alt="Credit Cards" />
+            <h3>Credit Cards</h3>
+            <p>Cashback, rewards and miles—find the card that suits you.</p>
+          </div>
+          <div class="product-card">
+            <img src="https://raw.githubusercontent.com/WxCCDemo/OCBC-Demo/main/OCBC%20Person%20using%20banking%20app.jpeg" alt="Deposits" />
+            <h3>Deposits</h3>
+            <p>Fixed and recurring deposits with competitive rates and flexible terms.</p>
+          </div>
+          <div class="product-card">
+            <img src="https://raw.githubusercontent.com/WxCCDemo/OCBC-Demo/main/singapore-financial-planners-talking-with-client.jpg" alt="Investments" />
+            <h3>Investments</h3>
+            <p>Grow your wealth with unit trusts, funds, stocks, and retirement planning.</p>
+          </div>
         </div>
-        <div class="contact-card">
-          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/WA_UOB_QRCOde.png?v=1751963517950" alt="WhatsApp QR code" class="qr">
-          <h3>WhatsApp Banking</h3>
-          <a href="https://wa.me/12076803454" class="contact-link">+1 207 680 3454</a>
-          <p class="qr-caption">Scan to chat instantly</p>
-        </div>
-        <div class="contact-card">
-          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/Email.png?v=1751963634340" alt="Email icon" class="icon">
-          <h3>Email Support</h3>
-          <a href="mailto:scbankcare@gmail.com" class="contact-link">scbankcare@gmail.com</a>
-        </div>
-        <div class="contact-card">
-          <img src="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/X.png?v=1751963639110" alt="X/Twitter icon" class="icon">
-          <h3>X (Twitter)</h3>
-          <a href="https://x.com/" class="contact-link" target="_blank" rel="noopener">Connect on X</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Live Chat Widget (Webex Connect) -->
-<div id="divicw" data-bind="A0993777-C0CF-4DE8-BF2D-57859A20A5A7" data-org=""></div><script>var i={t:function(t){var e="https://attachments.apac2.webexengage.com/widget/js/imichatinit.js";try{var o=new XMLHttpRequest;o.onreadystatechange=function(){if(this.readyState==4){var t=document.getElementById("divicw");if(this.status==0){i.o(t);return}var e=document.createElement("script");e.innerHTML=this.responseText;t.parentNode.insertBefore(e,t.nextSibling)}};o.open("GET",e,true);o.send()}catch(s){console.error(s)}},o:function(t){t.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow: hidden;height: 208px;width: 394px;position: fixed;display: block;right: 48px;bottom: 12px;z-index: 99999; display:none;"></iframe>');var e=document.getElementById("tls_al_frm");var o=e.contentWindow||(e.contentDocument.document||e.contentDocument);o.document.open();o.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Untitled Document</title><style>body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;color: #99a0b0;font-size: 14px;}.popover__content{background-color: #fbfbfe; padding: 1.5rem; border-radius: 5px; width: 300px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);position: relative;}.popover__message{font-weight: 600;color:#56627c;font-size: 16px;}.pull-left{float:left;}.clearfix{clear: both;}.hdr-txt{width: 218px; margin-top: 3px;}.para-txt a{text-decoration: none;color: #005cde;}.close-btn{position: absolute;right:15px;top:15px;}.close-btn a{text-decoration: none;font-weight: 400; color: #56627c; font-size: 16px;}</style></head><body><div class="popover__content"><div class="close-btn"><a href="#" onclick="closeTLSAlert();">X</a></div><div class="popover__message"><div class="pull-left hdr-txt">This browser version is not supported on LiveChat.</div></div><div class="clearfix"></div><p class="para-txt">Please update your browser to the latest version and re-open the website to access the widget. </p></div><script>function closeTLSAlert(){window.parent.postMessage({key: "close_tls_alert",value: "close_tls_alert",action: "close_tls_alert"}, "*");}<\/script></body></html>');o.document.close();e.style.display="block";window.addEventListener("message",function(t){if(t.data.action=="close_tls_alert"){i.s()}})},s:function(){var t=document.getElementById("tls_al_frm");t.remove()}};i.t(function(t){});</script>
-  <!-- Footer (clean, no FBM branding) -->
-  <footer role="contentinfo">
-    &copy; 2025 UOB Bank (Demo). For demonstration purposes only.
-  </footer>
-  <script src="script.js"></script>
+      <!-- Loans -->
+      <section id="loans">
+        <h2>Loans</h2>
+        <div class="products-row left-shift">
+          <div class="product-card">
+            <img src="https://raw.githubusercontent.com/WxCCDemo/OCBC-Demo/main/Business%20Team%20in%20Singapore.jpeg" alt="Personal Loans" />
+            <h3>Personal Loans</h3>
+            <p>Flexible personal financing—quick approval and attractive rates.</p>
+          </div>
+          <div class="product-card">
+            <img src="https://raw.githubusercontent.com/WxCCDemo/OCBC-Demo/main/Singapore%20Bank%20Branch%20Interior.jpg" alt="Home Loans" />
+            <h3>Home Loans</h3>
+            <p>Competitive mortgages and refinancing options for your future home.</p>
+          </div>
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Car Loans" />
+            <h3>Car Loans</h3>
+            <p>Finance your dream car with low rates and easy repayment plans.</p>
+          </div>
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80" alt="Education Loans" />
+            <h3>Education Loans</h3>
+            <p>Fund your studies with hassle-free student loans and flexible repayments.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Us -->
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-row left-shift">
+          <div class="contact-method">
+            <img src="https://raw.githubusercontent.com/WxCCDemo/OCBC-Demo/main/contact-us-phone.jpeg" alt="Phone Icon" />
+            <div>
+              <div class="method-label">Phone Banking</div>
+              <a href="tel:+16692856683">+1 669 285 6683</a>
+            </div>
+          </div>
+          <div class="contact-method">
+            <img src="https://raw.githubusercontent.com/WxCCDemo/OCBC-Demo/main/contact-us-whatsapp.jpeg" alt="WhatsApp Icon" />
+            <div>
+              <div class="method-label">WhatsApp Banking</div>
+              <a href="https://wa.me/12076803464" target="_blank" rel="noopener">+1 (207) 680-3464</a>
+            </div>
+          </div>
+          <div class="contact-method">
+            <img src="https://raw.githubusercontent.com/WxCCDemo/OCBC-Demo/main/contact-us-email.jpg" alt="Email Icon" />
+            <div>
+              <div class="method-label">Email Banking</div>
+              <a href="mailto:cxdemosc@gmail.com">cxdemosc@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-method">
+            <img src="https://raw.githubusercontent.com/WxCCDemo/OCBC-Demo/main/Contact-Us-Address.png" alt="Address Icon" />
+            <div>
+              <div class="method-label">Office Address</div>
+              <div>65 Chulia Street, Singapore 049513</div>
+            </div>
+          </div>
+        </div>
+        <div aria-label="Live Chat Widget" role="complementary" id="live-chat-container"></div>
+      </section>
+    </main>
+    <footer>
+      <p>Privacy Policy | Terms of Use | Disclaimer</p>
+      <p>&copy; 2025 OCBC Bank Singapore – All rights reserved</p>
+    </footer>
+  </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
