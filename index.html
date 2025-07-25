@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>UOB Bank (Demo)</title>
-  <meta name="description" content="UOB Bank (Demo): Your trusted partner in digital banking innovation. Discover our modern banking, insurance, and investment services.">
+  <meta name="description" content="UOB Bank (Demo): Your trusted partner in digital banking innovation.">
   <link rel="icon" href="https://cdn.glitch.global/6ed6be0a-7e7f-4c4a-bd27-5941c29c54d5/UOB-Logo.jpg?v=1751963281507">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -25,15 +25,15 @@
   </header>
 
   <!-- Hero Section -->
-<section id="home" class="hero" central-panel>
-  <div class="hero-content">
-    <h1>Welcome to UOB Bank (Demo)</h1>
-    <p class="subtitle">Your trusted partner in banking innovation.</p>
-  </div>
-</section>
+  <section id="home" class="hero" central-panel>
+    <div class="hero-content">
+      <h1>Welcome to UOB Bank (Demo)</h1>
+      <p class="subtitle">Your trusted partner in banking innovation.</p>
+    </div>
+  </section>
 
   <main role="main">
-    <!-- Services Section: 2x2 Grid -->
+    <!-- Services Section -->
     <section id="services" class="services-panel">
       <h2>Our Services</h2>
       <div class="services-grid">
@@ -60,7 +60,7 @@
       </div>
     </section>
 
-    <!-- Contact Section: Single Row -->
+    <!-- Contact Section -->
     <section id="contact" class="contact-panel">
       <h2>Contact Us</h2>
       <div class="contact-grid">
@@ -87,10 +87,22 @@
         </div>
       </div>
     </section>
+  </main>
 
-    <!-- Live Chat Widget (Webex Connect) -->
-<div id="divicw" data-bind="A0993777-C0CF-4DE8-BF2D-57859A20A5A7" data-org=""></div><script>var i={t:function(t){var e="https://attachments.apac2.webexengage.com/widget/js/imichatinit.js";try{var o=new XMLHttpRequest;o.onreadystatechange=function(){if(this.readyState==4){var t=document.getElementById("divicw");if(this.status==0){i.o(t);return}var e=document.createElement("script");e.innerHTML=this.responseText;t.parentNode.insertBefore(e,t.nextSibling)}};o.open("GET",e,true);o.send()}catch(s){console.error(s)}},o:function(t){t.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow: hidden;height: 208px;width: 394px;position: fixed;display: block;right: 48px;bottom: 12px;z-index: 99999; display:none;"></iframe>');var e=document.getElementById("tls_al_frm");var o=e.contentWindow||(e.contentDocument.document||e.contentDocument);o.document.open();o.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Untitled Document</title><style>body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;color: #99a0b0;font-size: 14px;}.popover__content{background-color: #fbfbfe; padding: 1.5rem; border-radius: 5px; width: 300px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);position: relative;}.popover__message{font-weight: 600;color:#56627c;font-size: 16px;}.pull-left{float:left;}.clearfix{clear: both;}.hdr-txt{width: 218px; margin-top: 3px;}.para-txt a{text-decoration: none;color: #005cde;}.close-btn{position: absolute;right:15px;top:15px;}.close-btn a{text-decoration: none;font-weight: 400; color: #56627c; font-size: 16px;}</style></head><body><div class="popover__content"><div class="close-btn"><a href="#" onclick="closeTLSAlert();">X</a></div><div class="popover__message"><div class="pull-left hdr-txt">This browser version is not supported on LiveChat.</div></div><div class="clearfix"></div><p class="para-txt">Please update your browser to the latest version and re-open the website to access the widget. </p></div><script>function closeTLSAlert(){window.parent.postMessage({key: "close_tls_alert",value: "close_tls_alert",action: "close_tls_alert"}, "*");}<\/script></body></html>');o.document.close();e.style.display="block";window.addEventListener("message",function(t){if(t.data.action=="close_tls_alert"){i.s()}})},s:function(){var t=document.getElementById("tls_al_frm");t.remove()}};i.t(function(t){});</script>
-  <!-- Footer (clean, no FBM branding) -->
+  <!-- Webex Connect Live Chat Widget -->
+  <div id="divicw" data-bind="A0993777-C0CF-4DE8-BF2D-57859A20A5A7" data-org=""></div>
+  <script>
+    var i={t:function(t){var e="https://attachments.apac2.webexengage.com/widget/js/imichatinit.js";
+    try{var o=new XMLHttpRequest;o.onreadystatechange=function(){if(this.readyState==4){
+    var t=document.getElementById("divicw");if(this.status==0){i.o(t);return}
+    var e=document.createElement("script");e.innerHTML=this.responseText;
+    t.parentNode.insertBefore(e,t.nextSibling)}};o.open("GET",e,true);o.send()}
+    catch(s){console.error(s)}},o:function(t){t.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow: hidden;height: 208px;width: 394px;position: fixed;display: block;right: 48px;bottom: 12px;z-index: 99999; display:none;"></iframe>');
+    var e=document.getElementById("tls_al_frm");var o=e.contentWindow||(e.contentDocument.document||e.contentDocument);
+    o.document.open();o.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Untitled Document</title><style>body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;color: #99a0b0;font-size: 14px;}.popover__content{background-color: #fbfbfe; padding: 1.5rem; border-radius: 5px; width: 300px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);position: relative;}.popover__message{font-weight: 600;color:#56627c;font-size: 16px;}.pull-left{float:left;}.clearfix{clear: both;}.hdr-txt{width: 218px; margin-top: 3px;}.para-txt a{text-decoration: none;color: #005cde;}.close-btn{position: absolute;right:15px;top:15px;}.close-btn a{text-decoration: none;font-weight: 400; color: #56627c; font-size: 16px;}</style></head><body><div class="popover__content"><div class="close-btn"><a href="#" onclick="closeTLSAlert();">X</a></div><div class="popover__message"><div class="pull-left hdr-txt">This browser version is not supported on LiveChat.</div></div><div class="clearfix"></div><p class="para-txt">Please update your browser to the latest version and re-open the website to access the widget. </p></div><script>function closeTLSAlert(){window.parent.postMessage({key: "close_tls_alert",value: "close_tls_alert",action: "close_tls_alert"}, "*");}<\/script></body></html>');o.document.close();e.style.display="block";window.addEventListener("message",function(t){if(t.data.action=="close_tls_alert"){i.s()}})},s:function(){var t=document.getElementById("tls_al_frm");t.remove()}};i.t(function(t){});
+  </script>
+
+  <!-- Footer -->
   <footer role="contentinfo">
     &copy; 2025 UOB Bank (Demo). For demonstration purposes only.
   </footer>
